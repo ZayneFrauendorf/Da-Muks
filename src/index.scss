@@ -1,0 +1,23 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+$orange: #eb5e28;
+$dark-bg: #3e3e3c;
+
+@import './styles/header';
+@import './landing-page';
+@import './styles/store';
+@import './styles/navigation';
+@import './styles/checkout';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');

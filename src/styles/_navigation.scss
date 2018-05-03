@@ -1,0 +1,52 @@
+.navigation {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: white;
+  z-index: 2;
+
+  .nav-item {
+    color: #3e3e3c;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .85em;
+    font-family: "Montserrat", "Arial", sans-serif;
+  }
+
+  .cart-btn {
+    i {
+      position: relative;
+      font-size: 1.3em;
+    }
+    span {
+      position: absolute;
+      background-color: $orange;
+      border-radius: 100%;
+      padding: 4px;
+      color: white;
+      font-size: 12px;
+      width: 24px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      bottom: -20px;
+      right: -16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .navigation {
+    flex-direction: column;
+    text-align: center;
+    right: 0px;
+  }
+}
