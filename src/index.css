@@ -152,13 +152,15 @@ section + section + section {
   flex-wrap: wrap;
   background: white;
   z-index: 2; }
+  .navigation .fa-bars {
+    padding: 30px; }
   .navigation .nav-item {
     color: #3e3e3c;
     margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: .85em;
+    font-size: 0.85em;
     font-family: "Montserrat", "Arial", sans-serif; }
   .navigation .cart-btn i {
     position: relative;
@@ -222,6 +224,16 @@ table {
       border-bottom: 2px solid #ddd; }
       table tbody tr td {
         padding: 0.75em 0; }
+        table tbody tr td .quantity-btns {
+          border-radius: 100%;
+          padding: 4px;
+          margin: 4px;
+          width: 25px;
+          height: 25px;
+          background: #eb5e28;
+          color: white;
+          border: none;
+          font-weight: bold; }
         table tbody tr td .img-title-weight-ctr {
           display: flex;
           flex-direction: row; }
@@ -361,3 +373,32 @@ table {
 @media screen and (min-width: 600px) {
   #rwd-table tbody tr td:nth-of-type(3):before {
     content: ""; } }
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .hero .hero-ctr-ctr {
+    width: 100%;
+    max-width: 800px; }
+  .hero .hero-container {
+    max-width: 300px;
+    margin-left: auto;
+    color: white; }
+    @media screen and (max-width: 540px) {
+      .hero .hero-container {
+        margin: auto; } }
+    .hero .hero-container u {
+      color: #eb5e28; }
+    .hero .hero-container button {
+      border-radius: 20px;
+      background-color: #eb5e28;
+      padding: 15px;
+      border: none;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      width: 150px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 10px; }

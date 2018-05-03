@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -15,9 +14,10 @@ body {
 $orange: #eb5e28;
 $dark-bg: #3e3e3c;
 
-@import './styles/header';
-@import './landing-page';
-@import './styles/store';
-@import './styles/navigation';
-@import './styles/checkout';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+@import "./styles/header";
+@import "./landing-page";
+@import "./styles/store";
+@import "./styles/navigation";
+@import "./styles/checkout";
+@import "./styles/_hero.scss";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");

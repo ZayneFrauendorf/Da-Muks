@@ -6,7 +6,7 @@ class ProductCard extends Component {
     return (
       <React.Fragment>
         <div className="product-card">
-        <h1>Hello</h1>
+          <h1>Hello</h1>
         </div>
       </React.Fragment>
     );

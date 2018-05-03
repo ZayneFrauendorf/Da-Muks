@@ -32,21 +32,26 @@ class Checkout extends Component {
                         </div>
                       </div>
                     </td>
-                    <td>1</td>
+                    <td>
+                      <button className="quantity-btns">-</button>1<button className="quantity-btns">
+                        +
+                      </button>
+                    </td>
                     <td>{price}</td>
                     <td>X</td>
                   </tr>
                 );
               })}
-               
             </tbody>
             <tfoot>
-            <tr>
-                      <td></td>
-                      <td></td>
-                      <td>$90</td>
-                      <td><button>Purchase</button></td>
-                    </tr>
+              <tr>
+                <td />
+                <td />
+                <td>Total: $90</td>
+                <td>
+                  <button>Purchase</button>
+                </td>
+              </tr>
             </tfoot>
           </table>
         </div>

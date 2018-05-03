@@ -9,13 +9,17 @@
   background: white;
   z-index: 2;
 
+  .fa-bars {
+    padding: 30px;
+  }
+
   .nav-item {
     color: #3e3e3c;
     margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: .85em;
+    font-size: 0.85em;
     font-family: "Montserrat", "Arial", sans-serif;
   }
 
