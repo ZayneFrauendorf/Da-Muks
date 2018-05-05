@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import Header from "./Header.js";
-import products from "../content/products";
-// import img from '../images/HoneyJar.png';
-import spimg from "../images/HoneyJar.png";
+import CheckoutRow from "./CheckoutRow.js";
 
 class Checkout extends Component {
   render() {
-    console.log(products);
     return (
       <React.Fragment>
         <Header />
@@ -20,28 +17,7 @@ class Checkout extends Component {
               </tr>
             </thead>
             <tbody>
-              {products.map(({ title, weight, img, price }) => {
-                return (
-                  <tr>
-                    <td>
-                      <div className="img-title-weight-ctr">
-                        <img src={spimg} />
-                        <div className="title-weight">
-                          <span>{title}</span>
-                          <span>{weight}</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <button className="quantity-btns">-</button>1<button className="quantity-btns">
-                        +
-                      </button>
-                    </td>
-                    <td>{price}</td>
-                    <td>X</td>
-                  </tr>
-                );
-              })}
+              <CheckoutRow />
             </tbody>
             <tfoot>
               <tr>

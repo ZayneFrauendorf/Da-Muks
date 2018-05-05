@@ -1,19 +1,18 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import ProductInfo from "./components/ProductInfo";
+import Footer from "./components/Footer";
 
-class LandingPage extends Component {
-  render() {
-    return (
-      <div className="landing-page">
-        <Header />
-        <Hero />
-        <section />
-        <section />
-      </div>
-    );
-  }
-}
+const LandingPage = () => {
+  return (
+    <div className="landing-page">
+      <Header />
+      <Hero />
+      <ProductInfo/>
+      <Footer/>
+    </div>
+  );
+};
 
 export default LandingPage;

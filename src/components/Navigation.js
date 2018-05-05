@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import '../styles/navigation.css';
 import navLinks from "../content/navLinks";
 
 class Navigation extends Component {
@@ -13,11 +12,7 @@ class Navigation extends Component {
   }
 
   handleNavClick() {
-    if (!this.state.mobileNavVisible) {
-      this.setState({ mobileNavVisible: true });
-    } else {
-      this.setState({ mobileNavVisible: false });
-    }
+    this.setState({ mobileNavVisible: !this.state.mobileNavVisible });
   }
 
   handleResize() {

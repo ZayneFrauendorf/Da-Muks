@@ -1,9 +1,10 @@
+import HoneyJar from '../images/HoneyJar.png'
 export default [
   {
     _id: 1,
     title: "Raw Honey",
     weight: "450g",
-    img: "../images/HoneyJar.png",
+    img: HoneyJar,
     description:
       "Delicious, good tasting honey that is truly raw and great for your health!",
     benefits: [
@@ -17,7 +18,7 @@ export default [
     _id: 2,
     title: "Raw Honey",
     weight: "450g",
-    img: "../images/HoneyJar.png",
+    img: HoneyJar,
     description:
       "Delicious, good tasting honey that is truly raw and great for your health!",
     benefits: [
@@ -31,7 +32,7 @@ export default [
     _id: 3,
     title: "Raw Honey",
     weight: "450g",
-    img: "../images/HoneyJar.png",
+    img: HoneyJar,
     description:
       "Delicious, good tasting honey that is truly raw and great for your health!",
     benefits: [
@@ -45,7 +46,7 @@ export default [
     _id: 4,
     title: "Raw Honey",
     weight: "450g",
-    img: "../images/HoneyJar.png",
+    img: HoneyJar,
     description:
       "Delicious, good tasting honey that is truly raw and great for your health!",
     benefits: [

@@ -33,8 +33,6 @@ section {
   text-align: center;
   font-weight: bold;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/HONEY.jpg") center repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover; }
 
 section + section {
@@ -402,3 +400,156 @@ table {
       font-weight: bold;
       letter-spacing: 1px;
       margin: 10px; }
+
+.content {
+  padding: 60px;
+  font-family: "Roboto", sans-serif;
+  background-color: #3e3e3c;
+  height: 100%; }
+  .content .card {
+    margin: auto;
+    max-width: 600px;
+    background-color: white; }
+    .content .card .confirm-title {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: gray 1px solid;
+      padding: 20px;
+      font-weight: 450; }
+    .content .card .card-main-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 10px;
+      max-width: 600px;
+      margin: auto; }
+      .content .card .card-main-container .product-overview {
+        position: relative;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 1px solid lightgrey;
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        background: linear-gradient(to bottom, #eb5e28 30%, white 0%); }
+        .content .card .card-main-container .product-overview .row-one {
+          padding: 15px; }
+          .content .card .card-main-container .product-overview .row-one img {
+            height: 60px;
+            width: 60px;
+            border-radius: 3px; }
+        .content .card .card-main-container .product-overview .row-two {
+          padding: 4px;
+          font-weight: bold; }
+          .content .card .card-main-container .product-overview .row-two .brand {
+            color: lightgrey; }
+        .content .card .card-main-container .product-overview .row-three {
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 8px;
+          font-weight: bold; }
+          .content .card .card-main-container .product-overview .row-three .money {
+            color: green; }
+      .content .card .card-main-container .payment-form {
+        min-height: 200px;
+        height: 100%;
+        width: 300px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .content .card .card-main-container .payment-form input {
+          height: 35px;
+          border-radius: 2px;
+          border: 1.5px solid lightgray; }
+        .content .card .card-main-container .payment-form .pf-first-row {
+          display: flex;
+          width: 100%;
+          font-size: 12px;
+          font-weight: 450;
+          color: gray;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          .content .card .card-main-container .payment-form .pf-first-row .name-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px; }
+          .content .card .card-main-container .payment-form .pf-first-row .postal-code-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 100px; }
+        .content .card .card-main-container .payment-form .pf-second-row {
+          width: 100%;
+          font-size: 12px;
+          font-weight: 450;
+          color: gray; }
+          .content .card .card-main-container .payment-form .pf-second-row .card-number-ctr {
+            display: flex;
+            flex-direction: column; }
+        .content .card .card-main-container .payment-form .pf-third-row {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          flex-wrap: wrap;
+          font-size: 12px;
+          font-weight: 450;
+          color: gray; }
+          .content .card .card-main-container .payment-form .pf-third-row .expiry-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px; }
+            .content .card .card-main-container .payment-form .pf-third-row .expiry-ctr .side-by-side {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around; }
+              .content .card .card-main-container .payment-form .pf-third-row .expiry-ctr .side-by-side input {
+                max-width: 70px; }
+              .content .card .card-main-container .payment-form .pf-third-row .expiry-ctr .side-by-side .divider {
+                margin: 10px; }
+          .content .card .card-main-container .payment-form .pf-third-row .cvv-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 100px; }
+            .content .card .card-main-container .payment-form .pf-third-row .cvv-ctr input {
+              max-width: 70px; }
+    .content .card .card-footer {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 15px;
+      max-width: 600px;
+      margin: auto;
+      padding-bottom: 30px; }
+      .content .card .card-footer .accepted-cards {
+        min-height: 35px;
+        height: 100%;
+        width: 200px;
+        border: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; }
+        .content .card .card-footer .accepted-cards i {
+          font-size: 35px; }
+        .content .card .card-footer .accepted-cards i:nth-of-type(odd) {
+          color: red; }
+        .content .card .card-footer .accepted-cards i:nth-of-type(even) {
+          color: blue; }
+      .content .card .card-footer .pay-now-btn {
+        height: 30px;
+        width: 300px; }
+        .content .card .card-footer .pay-now-btn button {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 35px;
+          border-radius: 20px;
+          border: none;
+          background-color: #eb5e28;
+          color: white;
+          padding: 10px; }

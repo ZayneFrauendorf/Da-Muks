@@ -1,16 +1,26 @@
-import React, { Component } from "react";
-import products from "../content/products";
+import React from "react";
 
-class ProductCard extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <div className="product-card">
-          <h1>Hello</h1>
+const ProductCard = ({ img, title, description, price }) => {
+  return (
+    <React.Fragment>
+      <div className="product">
+        <div className="image-title">
+          <img src={img} alt={title} />
+          <span className="title">{title}</span>
         </div>
-      </React.Fragment>
-    );
-  }
-}
+        <div className="wording-action-buttons-ctr">
+          <div className="wording">
+            <p>{description}</p>
+          </div>
+          <div className="action-buttons-ctr">
+            <button>Buy & Checkout</button>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <span className="price">{price}</span>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default ProductCard;
