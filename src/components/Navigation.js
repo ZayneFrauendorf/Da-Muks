@@ -4,7 +4,6 @@ import navLinks from "../content/navLinks";
 class Navigation extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       windowWidth: window.innerWidth,
       mobileNavVisible: false
@@ -49,10 +48,11 @@ class Navigation extends Component {
                   {text}
                 </a>
               ) : (
-                <a href={path} className="nav-item cart-btn">
+                <a href={path} className="nav-item cart-btn snipcart-checkout">
                   <i className="fa fa-shopping-cart cart-icon">
-                    {" "}
-                    <span className="badge navbadge">0</span>
+                    <div class="snipcart-summary">
+                      <span class="snipcart-total-items" />
+                    </div>
                   </i>
                 </a>
               );
