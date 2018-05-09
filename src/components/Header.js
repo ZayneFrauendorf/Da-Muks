@@ -7,7 +7,9 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Image src={logo} wrapImg href="/" alt="Da Muks" />
+        <div>
+          <Image src={logo} wrapImg href="/" alt="Da Muks" />
+        </div>
         <Navigation />
       </div>
     );
