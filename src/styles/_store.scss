@@ -2,7 +2,6 @@
   // display: flex;
   // flex-direction: row;
   // justify-content: space-around;
-  padding: 30px;
   background: $dark-bg;
   height: 100%;
   // padding: 30px;
@@ -19,9 +18,9 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    @media screen and (max-width: 810px) {
-      flex-direction: column;
-    }
+    // @media screen and (max-width: 810px) {
+    //   flex-direction: column;
+    // }
   }
 
   .product {
@@ -31,10 +30,10 @@
     background: white;
     max-height: 300px;
     max-width: 600px;
-    z-index: 1;
     padding: 10px;
     border-radius: 2px;
     margin: 20px;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 1000px) {
       margin: 20px;
@@ -133,6 +132,8 @@
       button {
         background: none;
         border: 1px #5e5e5e solid;
+        padding: 6px;
+        cursor: pointer;
       }
     }
   }

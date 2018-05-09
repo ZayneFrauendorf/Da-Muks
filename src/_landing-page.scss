@@ -1,23 +1,23 @@
 .landing-page {
   position: relative;
-}
 
-section {
-  height: 100vh;
-  vertical-align: middle;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: bold;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../src/images/HONEY.jpg") center repeat fixed;
-  background-size: cover;
-}
+  section {
+    height: 100vh;
+    vertical-align: middle;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../src/images/HONEY.jpg") center repeat fixed;
+    background-size: cover;
+  }
 
-section + section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../src/images/BeesEating.jpg");
-}
+  section + section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../src/images/BeesEating.jpg");
+  }
 
-section + section + section {
-  background: #1f1f1f;
+  // section + section + section {
+  //   background: #1f1f1f;
+  // }
 }
