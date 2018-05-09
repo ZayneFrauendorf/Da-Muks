@@ -10,6 +10,9 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   box-sizing: border-box; }
 
+#root {
+  background: #fffcf5; }
+
 .header {
   position: relative;
   width: 100%;
@@ -18,31 +21,29 @@ body {
   max-height: 120px;
   justify-content: space-between;
   margin: 0 auto;
-  align-items: center; }
+  align-items: center;
+  background-color: #fffcf5; }
+  .header .navigation {
+    right: 10px;
+    top: 20px; }
   .header img {
     max-width: 140px;
     padding: 10px; }
 
 .landing-page {
   position: relative; }
-
-section {
-  height: 100vh;
-  vertical-align: middle;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: bold;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/HONEY.jpg") center repeat fixed;
-  background-size: cover; }
-
-section + section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/BeesEating.jpg"); }
-
-section + section + section {
-  background: #1f1f1f; }
+  .landing-page section {
+    height: 100vh;
+    vertical-align: middle;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/HONEY.jpg") center repeat fixed;
+    background-size: cover; }
+  .landing-page section + section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/BeesEating.jpg"); }
 
 .store {
-  padding: 30px;
   background: #3e3e3c;
   height: 100%; }
   .store .product-container {
@@ -53,9 +54,6 @@ section + section + section {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center; }
-    @media screen and (max-width: 810px) {
-      .store .product-container {
-        flex-direction: column; } }
   .store .product {
     position: relative;
     display: flex;
@@ -63,10 +61,10 @@ section + section + section {
     background: white;
     max-height: 300px;
     max-width: 600px;
-    z-index: 1;
     padding: 10px;
     border-radius: 2px;
-    margin: 20px; }
+    margin: 20px;
+    flex-wrap: wrap; }
     @media screen and (max-width: 1000px) {
       .store .product {
         margin: 20px; } }
@@ -138,18 +136,18 @@ section + section + section {
           background: white; } }
       .store .product .action-buttons-ctr button {
         background: none;
-        border: 1px #5e5e5e solid; }
+        border: 1px #5e5e5e solid;
+        padding: 6px;
+        cursor: pointer; }
 
 .navigation {
-  position: absolute;
-  right: 10px;
-  top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
-  background: white;
-  z-index: 2; }
+  flex-wrap: wrap; }
+  @media only screen and (max-width: 600px) {
+    .navigation {
+      max-width: 200px; } }
   .navigation .fa-bars {
     padding: 30px; }
   .navigation .nav-item {
@@ -159,7 +157,12 @@ section + section + section {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.85em;
-    font-family: "Montserrat", "Arial", sans-serif; }
+    font-family: "Montserrat", "Arial", sans-serif;
+    flex-wrap: wrap;
+    padding: 6px; }
+    @media only screen and (max-width: 600px) {
+      .navigation .nav-item {
+        flex: 1 30%; } }
   .navigation .cart-btn i {
     position: relative;
     font-size: 1.3em; }
@@ -178,12 +181,6 @@ section + section + section {
     white-space: nowrap;
     bottom: -20px;
     right: -16px; }
-
-@media only screen and (max-width: 550px) {
-  .navigation {
-    flex-direction: column;
-    text-align: center;
-    right: 0px; } }
 
 /* Include CSS Normalize */
 *,
@@ -399,7 +396,8 @@ table {
       width: 150px;
       font-weight: bold;
       letter-spacing: 1px;
-      margin: 10px; }
+      margin: 10px;
+      cursor: pointer; }
 
 .content {
   padding: 60px;
@@ -553,3 +551,50 @@ table {
           background-color: #eb5e28;
           color: white;
           padding: 10px; }
+
+.footer {
+  max-height: 120px;
+  height: 100%;
+  vertical-align: middle;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  background: #1f1f1f; }
+  .footer .footer-item-ctr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto; }
+  .footer .navigation {
+    justify-content: space-around;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 300px;
+    padding-bottom: 10px; }
+    @media only screen and (max-width: 600px) {
+      .footer .navigation {
+        max-width: 200px; } }
+  .footer .navigation .nav-item {
+    color: white; }
+    @media only screen and (max-width: 600px) {
+      .footer .navigation .nav-item {
+        flex: 1 30%; } }
+  .footer .copyright {
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    vertical-align: middle;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-left: 14px;
+    margin: 10px; }
+
+.about {
+  position: relative;
+  height: 80vh; }
+  .about h1 {
+    padding: 40px; }

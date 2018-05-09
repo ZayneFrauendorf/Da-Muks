@@ -11,6 +11,12 @@ body {
   box-sizing: border-box;
 }
 
+#root {
+  background: #fffcf5;
+}
+
+
+// #efe778
 $orange: #eb5e28;
 $dark-bg: #3e3e3c;
 
@@ -21,4 +27,6 @@ $dark-bg: #3e3e3c;
 @import "./styles/checkout";
 @import "./styles/_hero.scss";
 @import "./styles/_confirm.scss";
+@import "./styles/footer.scss";
+@import "./styles/_about.scss";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
