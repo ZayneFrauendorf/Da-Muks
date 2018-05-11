@@ -1,5 +1,7 @@
 .store {
   background: $dark-bg;
+  height: 80vh;
+  display: flex;
 
   .product-container {
     margin: auto;
@@ -9,7 +11,6 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    height: 75vh;
   }
 
   .product {
@@ -31,9 +32,6 @@
     @media screen and (max-width: 740px) {
       max-width: 90%;
       max-height: 550px;
-    }
-
-    @media screen and (max-width: 508px) {
       align-items: center;
       justify-content: center;
     }
