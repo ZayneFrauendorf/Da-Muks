@@ -199,7 +199,6 @@ table {
   }
 
   tr:nth-of-type(even) {
-    //background: $gray-color;
     td {
       &:before {
       }
@@ -285,83 +284,3 @@ table {
   @extend %responive-tables;
   @include responive-tables("Details", "Quantity", "Price");
 }
-
-//   #rwd-table {
-//     @extend %responive-tables;
-//     @include responive-tables("Heading Col 1", "Heading Col 2", "Heading Col 3");
-//   }
-
-//   %responive-tables {
-// 	@include rwd-first;
-
-// 	@media screen and (min-width: $medium-up) {
-// 		@include rwd-second;
-
-// 	}
-// }
-// .checkout {
-//   padding: 20px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   background: $dark-bg;
-//   height: 100vh;
-
-//   table {
-//     table-layout: fixed;
-//     width: 100%;
-//     background: white;
-//     max-width: 900px;
-
-//     td {
-//       text-align: center;
-//     }
-
-//     th {
-//       background: $orange;
-//       padding: 15px;
-//       color: white;
-//       font-weight: 300;
-//     }
-
-//     img {
-//       max-height: 100px;
-//       max-width: 100px;
-//       border-radius: 2px;
-//       margin-right: 4px;
-//     }
-
-//     button {
-//       border-radius: 25%;
-//       border: none;
-//       background-color: $orange;
-//       color: white;
-//       font-weight: bold;
-//       padding: 10px;
-//     }
-
-//     .img-title-weight {
-//       display: flex;
-//       flex-direction: row;
-//       padding: 10px;
-//     }
-
-//     .title-weight-container {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       text-align: left;
-
-//       .title {
-//         font-weight: bold;
-//         font-size: 18px;
-//       }
-
-//       .weight {
-//         color: gray;
-//         font-weight: bold;
-//       }
-//     }
-//   }
-// }

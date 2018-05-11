@@ -41,7 +41,11 @@ class ProductCard extends Component {
               <div className="action-buttons-ctr">
                 <button
                   className="snipcart-add-item"
-                  data-item-id={selectedProduct && selectedProduct.weight === "250G" ? "1" : "5"}
+                  data-item-id={
+                    selectedProduct && selectedProduct.weight === "250G"
+                      ? "1"
+                      : "5"
+                  }
                   data-item-name="Raw Honey"
                   data-item-price={selectedProduct && selectedProduct.price}
                   data-item-weight={selectedProduct && selectedProduct.weight}
@@ -76,7 +80,9 @@ class ProductCard extends Component {
               </React.Fragment>
             )}
           </div>
-          <span className="price">${selectedProduct && selectedProduct.price}</span>
+          <span className="price">
+            ${selectedProduct && selectedProduct.price}
+          </span>
         </div>
       </React.Fragment>
     );

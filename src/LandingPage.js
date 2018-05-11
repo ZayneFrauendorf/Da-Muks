@@ -7,15 +7,13 @@ import Footer from "./components/Footer";
 const LandingPage = () => {
   return (
     <React.Fragment>
-    <Header />
-    <div className="landing-page">
-
-      <Hero />
-      <ProductInfo/>
-
-    </div>
-          <Footer/>
-          </React.Fragment>
+      <Header />
+      <div className="landing-page">
+        <Hero />
+        <ProductInfo />
+      </div>
+      <Footer />
+    </React.Fragment>
   );
 };
 

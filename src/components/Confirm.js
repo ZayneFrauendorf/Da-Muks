@@ -16,7 +16,7 @@ const Confirm = () => {
           <div className="card-main-container">
             <div className="product-overview">
               <div className="row-one">
-                <img src={spimg} alt="honey"/>
+                <img src={spimg} alt="honey" />
               </div>
               <div className="row-two">
                 <span className="brand">Da Muks, Mangamuka</span>
@@ -52,9 +52,9 @@ const Confirm = () => {
                 <div className="expiry-ctr">
                   <label>Expiry</label>
                   <div className="side-by-side">
-                  <input type="text" />
-                  <span className="divider">/</span>
-                  <input type="text" />
+                    <input type="text" />
+                    <span className="divider">/</span>
+                    <input type="text" />
                   </div>
                 </div>
 
@@ -68,13 +68,13 @@ const Confirm = () => {
 
           <div className="card-footer">
             <div className="accepted-cards">
-            <i class="fa">&#xf1f3;</i>
-            <i class="fa">&#xf1f0;</i>
-            <i class="fa">&#xf1f4;</i>
-            <i class="fa">&#xf1f5;</i>
+              <i class="fa">&#xf1f3;</i>
+              <i class="fa">&#xf1f0;</i>
+              <i class="fa">&#xf1f4;</i>
+              <i class="fa">&#xf1f5;</i>
             </div>
             <div className="pay-now-btn">
-            <button>Pay Now</button>
+              <button>Pay Now</button>
             </div>
           </div>
         </div>

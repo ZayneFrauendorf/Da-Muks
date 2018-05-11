@@ -23,12 +23,13 @@
       flex-wrap: wrap;
       padding: 10px;
       max-width: 600px;
-        margin: auto;
+      margin: auto;
 
       .product-overview {
-          position: relative;
-          border-radius: 3px;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        position: relative;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border: 1px solid lightgrey;
         height: 200px;
         width: 200px;
@@ -36,43 +37,37 @@
         background: linear-gradient(to bottom, #eb5e28 30%, white 0%);
 
         .row-one {
-            padding: 15px;
+          padding: 15px;
 
-            img {
-                height: 60px;
-                width: 60px;
-                border-radius: 3px;
-            }
+          img {
+            height: 60px;
+            width: 60px;
+            border-radius: 3px;
+          }
         }
 
         .row-two {
-            padding: 4px;
-            font-weight: bold;
-            .brand {
-                color: lightgrey;
-            }
-
-            .product-title {
-
-            }
+          padding: 4px;
+          font-weight: bold;
+          .brand {
+            color: lightgrey;
+          }
         }
 
         .row-three {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap:wrap;
-            padding: 8px;
-            font-weight: bold;
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 8px;
+          font-weight: bold;
 
-            .money {
-                color: green;
-            }
+          .money {
+            color: green;
+          }
         }
-
-       
       }
 
       .payment-form {
@@ -85,142 +80,136 @@
         justify-content: space-between;
 
         input {
-            height: 35px;
-            border-radius: 2px;
-            border: 1.5px solid lightgray;
+          height: 35px;
+          border-radius: 2px;
+          border: 1.5px solid lightgray;
         }
 
         .pf-first-row {
-            display: flex;
-            width: 100%;
-            font-size: 12px;
-            font-weight: 450;
-            color: gray;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            
-            .name-ctr {
-                display: flex;
-                flex-direction: column;
-                max-width: 200px;
-         
-            }
+          display: flex;
+          width: 100%;
+          font-size: 12px;
+          font-weight: 450;
+          color: gray;
+          justify-content: space-between;
+          flex-wrap: wrap;
 
-            .postal-code-ctr {
-                display: flex;
-                flex-direction: column;
-                max-width: 100px;
-               
-            }
+          .name-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+          }
+
+          .postal-code-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 100px;
+          }
         }
 
         .pf-second-row {
-            width: 100%;
-            font-size: 12px;
-            font-weight: 450;
-            color: gray;
+          width: 100%;
+          font-size: 12px;
+          font-weight: 450;
+          color: gray;
 
-            .card-number-ctr {
-                display: flex;
-                flex-direction: column;
-            }
+          .card-number-ctr {
+            display: flex;
+            flex-direction: column;
+          }
         }
 
         .pf-third-row {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          flex-wrap: wrap;
+          font-size: 12px;
+          font-weight: 450;
+          color: gray;
+
+          .expiry-ctr {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
-            flex-wrap: wrap;
-            font-size: 12px;
-            font-weight: 450;
-            color: gray;
+            flex-direction: column;
+            max-width: 200px;
 
-            .expiry-ctr {
-                display: flex;
-                flex-direction: column;
-                max-width: 200px;
+            .side-by-side {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
 
-                .side-by-side {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
+              input {
+                max-width: 70px;
+              }
 
-                    input {
-                        max-width: 70px;
-                    }
-
-                    .divider {
-                        margin: 10px;
-                    }
-                }
-
-
+              .divider {
+                margin: 10px;
+              }
             }
+          }
 
-            .cvv-ctr {
-                display: flex;
-                flex-direction: column;
-                max-width: 100px;
+          .cvv-ctr {
+            display: flex;
+            flex-direction: column;
+            max-width: 100px;
 
-                input {
-                    max-width: 70px;
-                }
+            input {
+              max-width: 70px;
             }
+          }
         }
       }
     }
 
     .card-footer {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 15px;
+      max-width: 600px;
+      margin: auto;
+      padding-bottom: 30px;
+
+      .accepted-cards {
+        min-height: 35px;
+        height: 100%;
+        width: 200px;
+        border: none;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 15px;
-        max-width: 600px;
-        margin: auto;
-        padding-bottom: 30px;
 
-        .accepted-cards {
-            min-height: 35px;
-            height: 100%;
-            width: 200px;
-            border: none;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap:wrap;
-
-            i {
-                font-size: 35px;
-            }
-
-            i:nth-of-type(odd) {
-                color: red;
-            }
-
-            i:nth-of-type(even) {
-                color: blue;
-            }
-            
+        i {
+          font-size: 35px;
         }
 
-        .pay-now-btn {
-            height: 30px;
-            width: 300px;
-            
-
-            button {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 35px;
-                border-radius: 20px;
-                border: none;
-                background-color: $orange;
-                color: white;
-                padding: 10px;
-            }
+        i:nth-of-type(odd) {
+          color: red;
         }
+
+        i:nth-of-type(even) {
+          color: blue;
+        }
+      }
+
+      .pay-now-btn {
+        height: 30px;
+        width: 300px;
+
+        button {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 35px;
+          border-radius: 20px;
+          border: none;
+          background-color: $orange;
+          color: white;
+          padding: 10px;
+        }
+      }
     }
   }
 }

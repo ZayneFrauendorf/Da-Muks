@@ -53,7 +53,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    height: 80vh; }
+    height: 75vh; }
   .store .product {
     position: relative;
     display: flex;
@@ -61,7 +61,7 @@ body {
     background: white;
     max-height: 300px;
     max-width: 600px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 2px;
     margin: 20px;
     flex-wrap: wrap; }
@@ -72,6 +72,10 @@ body {
       .store .product {
         max-width: 90%;
         max-height: 550px; } }
+    @media screen and (max-width: 508px) {
+      .store .product {
+        align-items: center;
+        justify-content: center; } }
     @media screen and (max-width: 464px) {
       .store .product {
         flex-direction: column;

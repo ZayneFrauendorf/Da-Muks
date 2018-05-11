@@ -18,20 +18,23 @@ class Navigation extends Component {
     return (
       <React.Fragment>
         <div className="navigation">
-          {navLinks.map(({ text, path }) => {           
+          {navLinks.map(({ text, path }) => {
             return text !== "Cart" ? (
               <a href={path} key={text} className="nav-item">
                 {text}
               </a>
-      
             ) : (
-              <a href="#" key={text} className="nav-item cart-btn snipcart-checkout">
-              <i className="fa fa-shopping-cart cart-icon">
-                <div className="snipcart-summary">
-                  <span className="snipcart-total-items" />
-                </div>
-              </i>
-            </a>
+              <a
+                href="#"
+                key={text}
+                className="nav-item cart-btn snipcart-checkout"
+              >
+                <i className="fa fa-shopping-cart cart-icon">
+                  <div className="snipcart-summary">
+                    <span className="snipcart-total-items" />
+                  </div>
+                </i>
+              </a>
             );
           })}
         </div>
