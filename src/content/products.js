@@ -13,8 +13,8 @@ export default [
       "Prevents cancer and heart disease"
     ],
     productDetails: [
-      { weight: "250G", price: "25.00" },
-      { weight: "500G", price: "50.00" }
+      { weight: "250G", price: "25" },
+      { weight: "500G", price: "50" }
     ]
   }
 ];
