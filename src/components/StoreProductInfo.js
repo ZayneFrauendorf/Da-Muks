@@ -5,14 +5,15 @@ import ProductCard from "./ProductCard";
 const StoreProductInfo = () => {
   return (
     <React.Fragment>
-      {products.map(({ title, img, description, benefits, price }) => {
+      {products.map(({ title, img, description, benefits, productDetails }, index) => {
         return (
           <ProductCard
             title={title}
             img={img}
             description={description}
             benefits={benefits}
-            price={price}
+            productDetails={productDetails}
+            key={index}
           />
         );
       })}

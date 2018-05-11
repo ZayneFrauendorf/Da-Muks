@@ -44,8 +44,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/BeesEating.jpg"); }
 
 .store {
-  background: #3e3e3c;
-  height: 100%; }
+  background: #3e3e3c; }
   .store .product-container {
     margin: auto;
     max-width: 1000px;
@@ -53,7 +52,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center; }
+    align-items: center;
+    height: 100vh; }
   .store .product {
     position: relative;
     display: flex;
@@ -138,7 +138,16 @@ body {
         background: none;
         border: 1px #5e5e5e solid;
         padding: 6px;
-        cursor: pointer; }
+        cursor: pointer;
+        margin: 2px; }
+      .store .product .action-buttons-ctr select {
+        background: none;
+        border: 1px #5e5e5e solid;
+        padding: 6px;
+        cursor: pointer;
+        margin: 2px;
+        text-align-last: center;
+        overflow: hidden; }
 
 .navigation {
   display: flex;
