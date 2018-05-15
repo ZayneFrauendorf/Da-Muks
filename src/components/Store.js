@@ -3,6 +3,7 @@ import Header from "./Header.js";
 import StoreProductInfo from "./StoreProductInfo.js";
 import Footer from "./Footer";
 
+
 class Store extends Component {
   render() {
     return (

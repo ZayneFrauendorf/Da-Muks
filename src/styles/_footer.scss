@@ -1,5 +1,5 @@
 .footer {
-  max-height: 120px;
+  max-height: 140px;
   height: 100%;
   vertical-align: middle;
   font-size: 2rem;
@@ -13,6 +13,7 @@
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    min-height: 60px;
   }
 
   .navigation {
@@ -20,9 +21,10 @@
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 300px;
+    align-items: center;
+    // max-width: 300px;
     padding-bottom: 10px;
+    
 
     @media only screen and (max-width: 600px) {
       max-width: 200px;

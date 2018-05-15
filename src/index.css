@@ -18,11 +18,68 @@ body {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  max-height: 120px;
   justify-content: space-between;
   margin: 0 auto;
-  align-items: center;
   background-color: #fffcf5; }
+  .header .header-right {
+    display: flex;
+    justify-content: space-around; }
+    .header .header-right .mob-profile {
+      display: flex;
+      justify-content: center; }
+      @media (min-width: 900px) {
+        .header .header-right .mob-profile {
+          display: none; } }
+      .header .header-right .mob-profile i {
+        margin-top: 32px;
+        font-size: 2em;
+        color: #3e3e3c;
+        margin-right: 20px; }
+    .header .header-right .mob-cart {
+      display: flex;
+      justify-content: center; }
+      @media (min-width: 900px) {
+        .header .header-right .mob-cart {
+          display: none; } }
+      .header .header-right .mob-cart .cart-btn {
+        margin-top: 32px; }
+        .header .header-right .mob-cart .cart-btn i {
+          position: relative;
+          font-size: 2em;
+          color: #3e3e3c; }
+        .header .header-right .mob-cart .cart-btn span {
+          position: absolute;
+          background-color: #eb5e28;
+          border-radius: 100%;
+          padding: 4px;
+          color: white;
+          font-size: 12px;
+          width: 27px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          white-space: nowrap;
+          bottom: -20px;
+          right: -16px; }
+  .header .logo-and-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .header .logo-and-details .profile-options {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .header .logo-and-details .profile-options .profile-item {
+        color: #3e3e3c;
+        margin: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.85em;
+        font-family: "Montserrat", "Arial", sans-serif;
+        flex-wrap: wrap;
+        padding: 6px; }
   .header .navigation {
     right: 10px;
     top: 20px; }
@@ -84,7 +141,7 @@ body {
     .store .product .price {
       position: absolute;
       bottom: -10px;
-      right: -15px;
+      right: -30px;
       background: #eb5e28;
       color: white;
       border-radius: 100%;
@@ -156,12 +213,36 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap; }
-  @media only screen and (max-width: 600px) {
-    .navigation {
-      max-width: 200px; } }
+  flex-wrap: wrap;
+  align-self: center; }
+  @media (min-width: 900px) {
+    .navigation .navWide {
+      display: block; }
+    .navigation .navNarrow {
+      display: none; } }
+  @media (max-width: 900px) {
+    .navigation .navWide {
+      display: none; }
+    .navigation .navNarrow {
+      display: block; } }
   .navigation .fa-bars {
     padding: 30px; }
+  .navigation .navNarrow i {
+    align-self: flex-end; }
+  .navigation .navNarrow .navNarrow-ctr {
+    display: flex;
+    flex-direction: column; }
+  .navigation .navNarrow .narrowLinks {
+    display: none; }
+    .navigation .navNarrow .narrowLinks .narrowLinks-ctr {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+    .navigation .navNarrow .narrowLinks a {
+      display: block;
+      float: left;
+      clear: left;
+      margin-left: auto; }
   .navigation .nav-item {
     color: #3e3e3c;
     margin: 10px;
@@ -172,9 +253,6 @@ body {
     font-family: "Montserrat", "Arial", sans-serif;
     flex-wrap: wrap;
     padding: 6px; }
-    @media only screen and (max-width: 600px) {
-      .navigation .nav-item {
-        flex: 1 30%; } }
   .navigation .cart-btn i {
     position: relative;
     font-size: 1.3em; }
@@ -565,7 +643,7 @@ table {
           padding: 10px; }
 
 .footer {
-  max-height: 120px;
+  max-height: 140px;
   height: 100%;
   vertical-align: middle;
   font-size: 2rem;
@@ -577,14 +655,14 @@ table {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    margin: auto; }
+    margin: auto;
+    min-height: 60px; }
   .footer .navigation {
     justify-content: space-around;
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 300px;
+    align-items: center;
     padding-bottom: 10px; }
     @media only screen and (max-width: 600px) {
       .footer .navigation {

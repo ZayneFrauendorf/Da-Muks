@@ -9,7 +9,7 @@ const Footer = () => {
           <span className="copyright">
             Copyright &copy; {new Date().getFullYear()} Da Muks
           </span>
-          <Navigation />
+          {/* <Navigation /> */}
         </div>
       </section>
     </React.Fragment>

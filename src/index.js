@@ -8,8 +8,11 @@ import Store from "./components/Store";
 import Checkout from "./components/Checkout";
 import Confirm from "./components/Confirm";
 import About from "./components/About";
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={LandingPage} />
@@ -18,7 +21,8 @@ ReactDOM.render(
       <Route exact path="/confirm" component={Confirm} />
       <Route exact path="/about" component={About} />
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );
 registerServiceWorker();

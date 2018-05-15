@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addNotification } from "../actions/actions-da-muks";
 
 class ProductCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       added: false,
-      selectedProduct: null
+      selectedProduct: null,
     };
   }
 
@@ -15,17 +17,22 @@ class ProductCard extends Component {
       weight: value,
       selectedProduct: found
     });
+    console.log(found);
   };
 
   toggleAdded = () => {
     this.setState({
-      added: !this.state.added
+      added: !this.state.added,
+      selectedProduct: null
     });
+
+    this.props.dispatch(addNotification("heyo"));
   };
   render() {
     const { img, title, description, productDetails } = this.props;
     console.log(productDetails);
-    const { weight, added, selectedProduct } = this.state;
+    const { added, selectedProduct } = this.state;
+    const enabled = selectedProduct !== null;
     return (
       <React.Fragment>
         <div className="product">
@@ -39,23 +46,7 @@ class ProductCard extends Component {
             </div>
             {added === false ? (
               <div className="action-buttons-ctr">
-                <button
-                  className="snipcart-add-item"
-                  data-item-id={
-                    selectedProduct && selectedProduct.weight === "250G"
-                      ? "1"
-                      : "5"
-                  }
-                  data-item-name="Raw Honey"
-                  data-item-price={selectedProduct && selectedProduct.price}
-                  data-item-weight={selectedProduct && selectedProduct.weight}
-                  data-item-url="http://myapp.com/products/bacon"
-                  data-item-description="Raw honey"
-                  onClick={() => this.toggleAdded()}
-                >
-                  Add to Cart
-                </button>
-                <select value={weight} onChange={this.setWeight}>
+                <select onChange={this.setWeight}>
                   <option value="" selected disabled hidden>
                     Select Weight
                   </option>
@@ -67,6 +58,27 @@ class ProductCard extends Component {
                     );
                   })}
                 </select>
+                {enabled ? (
+                  <button
+                    className="snipcart-add-item"
+                    data-item-id={
+                      selectedProduct && selectedProduct.weight === "250G"
+                        ? "1"
+                        : "5"
+                    }
+                    data-item-name="Raw Honey"
+                    data-item-price={selectedProduct && selectedProduct.price}
+                    data-item-weight={selectedProduct && selectedProduct.weight}
+                    data-item-url="http://myapp.com/products/bacon"
+                    data-item-description="Raw honey"
+                    disabled={!enabled}
+                    onClick={() => this.toggleAdded()}
+                  >
+                    Add to Cart
+                  </button>
+                ) : (
+                  ""
+                )}
               </div>
             ) : (
               <React.Fragment>
@@ -81,7 +93,8 @@ class ProductCard extends Component {
             )}
           </div>
           <span className="price">
-            ${selectedProduct && selectedProduct.price}
+            {!enabled && <i class="fas fa-thumbs-up" />}
+            {selectedProduct && "$" + selectedProduct.price}
           </span>
         </div>
       </React.Fragment>
@@ -89,4 +102,10 @@ class ProductCard extends Component {
   }
 }
 
-export default ProductCard;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    message: state.notification.message
+  };
+};
+
+export default connect(mapStateToProps)(ProductCard);
