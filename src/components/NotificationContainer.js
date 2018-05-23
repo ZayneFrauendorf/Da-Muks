@@ -3,15 +3,32 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addNotification } from "../actions/actions-da-muks";
 
-export default class NotificationContainer extends Component {
+class NotificationContainer extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <div>Hello</div>;
+    const { message, type } = this.props;
+    
+    return (
+      <div>
+        {type && (
+          <div className={`notification-${type}`}>
+            <p>{message}</p>
+            <p>{type}</p>
+          </div>
+        )}
+      </div>
+    );
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    message: state.notification.message,
+    type: state.notification.errorType
+  };
+};
 
-export default connect (mapStateToProps, null )(NotificationContainer);
+export default connect(mapStateToProps)(NotificationContainer);

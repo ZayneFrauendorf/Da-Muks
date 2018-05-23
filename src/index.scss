@@ -15,6 +15,16 @@ body {
   background: #fffcf5;
 }
 
+.notification {
+  &-error {
+    background-color: red;
+  }
+  &-success {
+  }
+  &-warning {
+  }
+}
+
 $orange: #eb5e28;
 $dark-bg: #3e3e3c;
 

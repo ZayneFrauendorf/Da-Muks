@@ -1,14 +1,17 @@
 import Action from "../actions/actionTypes";
 
 const initialState = {
-  message: ""
+  message: "",
+  errorType: null
 };
 
-export const notification = (state = {}, action) => {
+export const notification = (state = initialState, action) => {
   switch (action.type) {
     case Action.ADD_NOTIFICATION:
       return {
-        message: action.message
+        ...state,
+        message: action.message,
+        errorType: action.errorType
       };
     default:
       return state;

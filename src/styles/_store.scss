@@ -1,6 +1,6 @@
 .store {
   background: $dark-bg;
-  height: 80vh;
+  height: calc(100vh - 162px);
   display: flex;
 
   .product-container {
@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     align-items: center;
   }
+ 
 
   .product {
     position: relative;

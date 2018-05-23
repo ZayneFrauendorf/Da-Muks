@@ -8,21 +8,24 @@ import Store from "./components/Store";
 import Checkout from "./components/Checkout";
 import Confirm from "./components/Confirm";
 import About from "./components/About";
-import { Provider } from 'react-redux';
-import store from './store';
+import { Provider } from "react-redux";
+import store from "./store";
 
-ReactDOM.render(
-  <Provider store={store}>
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={LandingPage} />
-      <Route exact path="/store" component={Store} />
-      <Route exact path="/checkout" component={Checkout} />
-      <Route exact path="/confirm" component={Confirm} />
-      <Route exact path="/about" component={About} />
-    </Switch>
-  </BrowserRouter>
-  </Provider>,
-  document.getElementById("root")
-);
+const App = () => {
+  return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/store" component={Store} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/confirm" component={Confirm} />
+            <Route exact path="/about" component={About} />
+          </Switch>
+        </BrowserRouter>
+      </Provider>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

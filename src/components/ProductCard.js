@@ -26,7 +26,7 @@ class ProductCard extends Component {
       selectedProduct: null
     });
 
-    this.props.dispatch(addNotification("heyo"));
+    this.props.dispatch(addNotification("heyo", "error"));
   };
   render() {
     const { img, title, description, productDetails } = this.props;
