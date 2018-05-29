@@ -13,17 +13,17 @@ import store from "./store";
 
 const App = () => {
   return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/store" component={Store} />
-            <Route exact path="/checkout" component={Checkout} />
-            <Route exact path="/confirm" component={Confirm} />
-            <Route exact path="/about" component={About} />
-          </Switch>
-        </BrowserRouter>
-      </Provider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/store" component={Store} />
+          <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/confirm" component={Confirm} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 };
 

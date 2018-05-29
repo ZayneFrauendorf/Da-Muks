@@ -1,18 +1,17 @@
 .store {
   background: $dark-bg;
-  height: calc(100vh - 162px);
-  display: flex;
+  height: calc(100vh - 100px);
+  // display: flex;
 
   .product-container {
     margin: auto;
     max-width: 1000px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
   }
- 
 
   .product {
     position: relative;

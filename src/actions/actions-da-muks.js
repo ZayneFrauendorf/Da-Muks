@@ -1,11 +1,7 @@
-import Action from './actionTypes';
-import actionTypes from './actionTypes';
-
-console.log(Action);
-
+import Action from "./actionTypes";
 
 export const addNotification = (message, errorType) => ({
-    type: Action.ADD_NOTIFICATION,
-    message,
-    errorType
-})
+  type: Action.ADD_NOTIFICATION,
+  message,
+  errorType
+});

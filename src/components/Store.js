@@ -8,9 +8,9 @@ class Store extends Component {
   render() {
     return (
       <React.Fragment>
-        <NotificationContainer />
         <Header />
         <div className="store">
+          <NotificationContainer />
           <div className="product-container">
             <StoreProductInfo />
           </div>

@@ -18,10 +18,20 @@ body {
 .notification {
   &-error {
     background-color: red;
+    color: white;
   }
   &-success {
+    background-color: green;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 4px;
   }
   &-warning {
+  }
+  &-none {
+    display: none;
   }
 }
 

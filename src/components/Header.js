@@ -15,7 +15,6 @@ class Header extends Component {
         <div className="header-right">
           <div className="mob-profile">
             <a href="#" class="snipcart-user-profile user-profile">
-              {/* <i class="fas fa-user"></i> */}
               <span class="">
                 <i class="fas fa-user" />
               </span>

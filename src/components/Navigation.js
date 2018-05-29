@@ -10,14 +10,6 @@ class Navigation extends Component {
     };
   }
 
-  handleNavClick() {
-    if (!this.state.mobileNavItemsVisible) {
-      this.setState({ mobileNavItemsVisible: true });
-    } else {
-      this.setState({ mobileNavItemsVisible: false });
-    }
-  }
-
   burgerToggle() {
     let linksEl = document.querySelector(".narrowLinks");
 
@@ -93,7 +85,6 @@ class Navigation extends Component {
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

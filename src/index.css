@@ -14,7 +14,19 @@ body {
   background: #fffcf5; }
 
 .notification-error {
-  background-color: red; }
+  background-color: red;
+  color: white; }
+
+.notification-success {
+  background-color: green;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 4px; }
+
+.notification-none {
+  display: none; }
 
 .header {
   position: relative;
@@ -105,13 +117,12 @@ body {
 
 .store {
   background: #3e3e3c;
-  height: calc(100vh - 162px);
-  display: flex; }
+  height: calc(100vh - 100px); }
   .store .product-container {
     margin: auto;
     max-width: 1000px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center; }

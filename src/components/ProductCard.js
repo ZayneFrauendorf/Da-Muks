@@ -7,7 +7,7 @@ class ProductCard extends Component {
     super(props);
     this.state = {
       added: false,
-      selectedProduct: null,
+      selectedProduct: null
     };
   }
 
@@ -17,7 +17,6 @@ class ProductCard extends Component {
       weight: value,
       selectedProduct: found
     });
-    console.log(found);
   };
 
   toggleAdded = () => {
@@ -25,12 +24,16 @@ class ProductCard extends Component {
       added: !this.state.added,
       selectedProduct: null
     });
-
-    this.props.dispatch(addNotification("heyo", "error"));
+    if (this.props.message === "") {
+      this.props.dispatch(
+        addNotification("Success, purchase added to your cart", "success")
+      );
+    } else {
+      this.props.dispatch(addNotification("", "none"));
+    }
   };
   render() {
     const { img, title, description, productDetails } = this.props;
-    console.log(productDetails);
     const { added, selectedProduct } = this.state;
     const enabled = selectedProduct !== null;
     return (
@@ -83,7 +86,6 @@ class ProductCard extends Component {
             ) : (
               <React.Fragment>
                 <div className="action-buttons-ctr">
-                  <span>Item Added!</span>
                   <button className="snipcart-checkout">Checkout</button>
                   <button onClick={() => this.toggleAdded()}>
                     Continue Shopping
