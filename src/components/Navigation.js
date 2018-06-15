@@ -6,7 +6,8 @@ class Navigation extends Component {
     super(props);
     this.state = {
       mobileNavItemsVisible: false,
-      barsIconvisible: false
+      barsIconvisible: false,
+      active: props.path
     };
   }
 
@@ -32,7 +33,15 @@ class Navigation extends Component {
             <div className="wideDiv">
               {navLinks.map(({ text, path }) => {
                 return text !== "Cart" ? (
-                  <a href={path} key={text} className="nav-item">
+                  <a
+                    href={path}
+                    key={text}
+                    className={
+                      path === this.state.active
+                        ? "nav-item active"
+                        : "nav-item"
+                    }
+                  >
                     {text}
                   </a>
                 ) : (
@@ -50,10 +59,10 @@ class Navigation extends Component {
                 );
               })}
               |
-              <a href="#" class="snipcart-user-profile nav-item">
-                <span class="snipcart-user-email">Login</span>
+              <a href="#" className="snipcart-user-profile nav-item">
+                <span className="snipcart-user-email">Login</span>
               </a>
-              <a href="#" class="snipcart-user-logout nav-item">
+              <a href="#" className="snipcart-user-logout nav-item">
                 Logout
               </a>
             </div>
@@ -74,13 +83,13 @@ class Navigation extends Component {
                     );
                   })}
 
-                  <a href="#" class="snipcart-user-profile nav-item">
-                    {/* <i class="fas fa-user"></i> */}
-                    <span class="">
-                      <i class="fas fa-user" />
+                  <a href="#" className="snipcart-user-profile nav-item">
+                    {/* <i className="fas fa-user"></i> */}
+                    <span className="">
+                      <i className="fas fa-user" />
                     </span>
                   </a>
-                  <a href="#" class="snipcart-user-logout nav-item">
+                  <a href="#" className="snipcart-user-logout nav-item">
                     Logout
                   </a>
                 </div>

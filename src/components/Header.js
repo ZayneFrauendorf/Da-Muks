@@ -14,9 +14,9 @@ class Header extends Component {
 
         <div className="header-right">
           <div className="mob-profile">
-            <a href="#" class="snipcart-user-profile user-profile">
-              <span class="">
-                <i class="fas fa-user" />
+            <a href="#" className="snipcart-user-profile user-profile">
+              <span className="">
+                <i className="fas fa-user" />
               </span>
             </a>
           </div>
@@ -31,7 +31,7 @@ class Header extends Component {
             </a>
           </div>
 
-          <Navigation />
+          <Navigation path={this.props.path} />
         </div>
       </div>
     );

@@ -1,13 +1,16 @@
+
 .store {
-  background: $dark-bg;
-  height: calc(100vh - 100px);
+  background: #3e3e3c;
+  min-height: 100vh;
+  // height: calc(100vh - 100px);
+  
   // display: flex;
 
   .product-container {
     margin: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;

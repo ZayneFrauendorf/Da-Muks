@@ -9,7 +9,7 @@ export default [
   },
 
   {
-    path: "/store",
+    path: "/Store",
     text: "Store"
   },
   {

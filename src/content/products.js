@@ -1,20 +1,40 @@
-import HoneyJar from "../images/HoneyJar.png";
+import HoneyJar from "../images/beesProductNice.jpg";
 export default [
   {
     _id: 1,
-    title: "Raw Honey",
-    weight: "450g",
-    img: HoneyJar,
+    name: "Raw Honey",
+    weight: "100g",
+    image: HoneyJar,
     description:
       "Delicious, good tasting honey that is truly raw and great for your health!",
-    benefits: [
-      "Strengthens your immune system",
-      "Regulates your blood sugar",
-      "Prevents cancer and heart disease"
-    ],
-    productDetails: [
-      { weight: "250G", price: "25" },
-      { weight: "500G", price: "50" }
-    ]
+      price: 10
+  },
+  {
+    _id: 2,
+    name: "Raw Honey",
+    weight: "250g",
+    image: HoneyJar,
+    description:
+      "Delicious, good tasting honey that is truly raw and great for your health!",
+      price: 25
+  },
+  {
+    _id: 3,
+    name: "Raw Honey",
+    weight: "500g",
+    image: HoneyJar,
+    description:
+      "Delicious, good tasting honey that is truly raw and great for your health!",
+      price: 50
+  },
+
+  {
+    _id: 4,
+    name: "Raw Honey",
+    weight: "700g",
+    image: HoneyJar,
+    description:
+      "Delicious, good tasting honey that is truly raw and great for your health!",
+      price: 70
   }
 ];

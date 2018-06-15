@@ -1,16 +1,14 @@
 import React from "react";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ProductInfo from "./components/ProductInfo";
 import Footer from "./components/Footer";
+import Slider from "./components/Slider";
 
-const LandingPage = () => {
+const LandingPage = props => {
   return (
     <React.Fragment>
-      <Header />
+      <Header path={props.location.pathname} />
       <div className="landing-page">
-        <Hero />
-        <ProductInfo />
+        <Slider />
       </div>
       <Footer />
     </React.Fragment>

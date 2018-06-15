@@ -8,7 +8,7 @@ class Store extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <Header path={this.props.location.pathname} />
         <div className="store">
           <NotificationContainer />
           <div className="product-container">

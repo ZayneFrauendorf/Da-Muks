@@ -5,43 +5,47 @@ import { addNotification } from "../actions/actions-da-muks";
 class ProductCard extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       added: false,
       selectedProduct: null
     };
   }
 
-  setWeight = ({ target: { value } }) => {
-    const found = this.props.productDetails.find(obj => obj.weight === value);
-    this.setState({
-      weight: value,
-      selectedProduct: found
-    });
-  };
-
-  toggleAdded = () => {
-    this.setState({
-      added: !this.state.added,
-      selectedProduct: null
-    });
-    if (this.props.message === "") {
+  changeStateAppropriately = () => {
+    if (this.props.message === "" && this.state.added !== true) {
       this.props.dispatch(
         addNotification("Success, purchase added to your cart", "success")
+      );
+
+      setTimeout(
+        function() {
+          this.props.dispatch(addNotification("", "none"));
+        }.bind(this),
+        1000
       );
     } else {
       this.props.dispatch(addNotification("", "none"));
     }
   };
+
+  toggleAdded = () => {
+    this.setState({
+      added: !this.state.added
+    });
+    this.changeStateAppropriately();
+  };
+
   render() {
-    const { img, title, description, productDetails } = this.props;
-    const { added, selectedProduct } = this.state;
-    const enabled = selectedProduct !== null;
+    const { name, description, image, price, weight, id } = this.props;
+    const { added } = this.state;
+
     return (
       <React.Fragment>
         <div className="product">
           <div className="image-title">
-            <img src={img} alt={title} />
-            <span className="title">{title}</span>
+            <img src={image} alt={name} />
+            <span className="title">{name}</span>
           </div>
           <div className="wording-action-buttons-ctr">
             <div className="wording">
@@ -49,39 +53,20 @@ class ProductCard extends Component {
             </div>
             {added === false ? (
               <div className="action-buttons-ctr">
-                <select onChange={this.setWeight}>
-                  <option value="" selected disabled hidden>
-                    Select Weight
-                  </option>
-                  {productDetails.map(productDetail => {
-                    return (
-                      <option value={productDetail.weight}>
-                        {productDetail.weight}
-                      </option>
-                    );
-                  })}
-                </select>
-                {enabled ? (
-                  <button
-                    className="snipcart-add-item"
-                    data-item-id={
-                      selectedProduct && selectedProduct.weight === "250G"
-                        ? "1"
-                        : "5"
-                    }
-                    data-item-name="Raw Honey"
-                    data-item-price={selectedProduct && selectedProduct.price}
-                    data-item-weight={selectedProduct && selectedProduct.weight}
-                    data-item-url="http://myapp.com/products/bacon"
-                    data-item-description="Raw honey"
-                    disabled={!enabled}
-                    onClick={() => this.toggleAdded()}
-                  >
-                    Add to Cart
-                  </button>
-                ) : (
-                  ""
-                )}
+                <center>{weight}</center>
+
+                <button
+                  className="snipcart-add-item"
+                  data-item-name={name}
+                  data-item-price={price}
+                  data-item-weight={weight}
+                  data-item-description={description}
+                  data-item-id={id}
+                  data-item-url="http://myapp.com/products/bacon"
+                  onClick={() => this.toggleAdded()}
+                >
+                  Add to Cart
+                </button>
               </div>
             ) : (
               <React.Fragment>
@@ -94,10 +79,7 @@ class ProductCard extends Component {
               </React.Fragment>
             )}
           </div>
-          <span className="price">
-            {!enabled && <i class="fas fa-thumbs-up" />}
-            {selectedProduct && "$" + selectedProduct.price}
-          </span>
+          <span className="price">${price}</span>
         </div>
       </React.Fragment>
     );

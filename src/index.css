@@ -23,7 +23,18 @@ body {
   padding: 6px;
   text-align: center;
   font-weight: 500;
-  border-radius: 4px; }
+  border-radius: 4px;
+  opacity: 0;
+  animation-duration: 2000ms;
+  animation-name: opacityOnAndOff; }
+
+@keyframes opacityOnAndOff {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .notification-none {
   display: none; }
@@ -104,25 +115,15 @@ body {
 
 .landing-page {
   position: relative; }
-  .landing-page section {
-    height: 100vh;
-    vertical-align: middle;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/HONEY.jpg") center repeat fixed;
-    background-size: cover; }
-  .landing-page section + section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../src/images/BeesEating.jpg"); }
 
 .store {
   background: #3e3e3c;
-  height: calc(100vh - 100px); }
+  min-height: 100vh; }
   .store .product-container {
     margin: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center; }
@@ -267,6 +268,8 @@ body {
     font-family: "Montserrat", "Arial", sans-serif;
     flex-wrap: wrap;
     padding: 6px; }
+  .navigation .active {
+    border-bottom: 1px solid #eb5e28; }
   .navigation .cart-btn i {
     position: relative;
     font-size: 1.3em; }
@@ -487,7 +490,7 @@ table {
     @media screen and (max-width: 540px) {
       .hero .hero-container {
         margin: auto; } }
-    .hero .hero-container u {
+    .hero .hero-container b {
       color: #eb5e28; }
     .hero .hero-container button {
       border-radius: 20px;
@@ -699,6 +702,44 @@ table {
 
 .about {
   position: relative;
-  height: 80vh; }
+  min-height: 100vh; }
+  .about .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: auto; }
+    .about .flex-container .column {
+      width: 50%;
+      flex: 1 400px;
+      max-width: 980px;
+      padding: 20px 5%; }
+      .about .flex-container .column img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        margin-right: 20px; }
+      .about .flex-container .column .fl {
+        float: left; }
+        @media (min-width: 600px) {
+          .about .flex-container .column .fl {
+            float: left;
+            width: auto; } }
+      .about .flex-container .column .fr {
+        float: left; }
+        @media (min-width: 600px) {
+          .about .flex-container .column .fr {
+            float: right;
+            margin-left: 20px;
+            width: auto; } }
+  .about p {
+    margin: 40px;
+    font-size: 20px; }
   .about h1 {
     padding: 40px; }
+  .about .container {
+    position: relative;
+    margin: 10px;
+    /* width: 50%; */ }
