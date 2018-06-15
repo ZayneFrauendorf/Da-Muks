@@ -7,16 +7,16 @@ export default class Hero extends Component {
       hero: []
     };
   }
-  componentDidMount() {
-    let dataURL = "http://localhost:8080/wp-json/wp/v2/hero?_embed";
-    fetch(dataURL)
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          hero: res
-        });
-      });
-  }
+  // componentDidMount() {
+  //   let dataURL = "http://localhost:8080/wp-json/wp/v2/hero?_embed";
+  //   fetch(dataURL)
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       this.setState({
+  //         hero: res
+  //       });
+  //     });
+  // }
   render() {
     let hero = this.state.hero.map(hero => {
       return <p key={hero.id}>{hero.acf["hero-text"]}</p>;
