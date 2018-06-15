@@ -8,9 +8,16 @@
   margin: 0 auto;
   background-color: #fffcf5;
 
+  @media (max-width: 900px) {
+    top: 0px;
+    position: fixed;
+    z-index: 1;
+  }
+
   .header-right {
     display: flex;
     justify-content: space-around;
+    z-index: 2;
 
     .mob-profile {
       display: flex;

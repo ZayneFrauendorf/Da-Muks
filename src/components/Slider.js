@@ -16,7 +16,12 @@ export default class Slider extends Component {
     this.state = {
       slides: [],
       loading: false,
-      defaultSlides: [jarHoney, niceBees, holdingBeesFrontEyeLine, beeKeeperHolding ]
+      defaultSlides: [
+        jarHoney,
+        niceBees,
+        holdingBeesFrontEyeLine,
+        beeKeeperHolding
+      ]
     };
   }
 
@@ -41,7 +46,7 @@ export default class Slider extends Component {
 
     return slides.length > 0 ? (
       <React.Fragment>
-        <AutoPlaySwipeableView interval={5000}>
+        <AutoPlaySwipeableView interval={7000}>
           {slides.map(slide => {
             return (
               <section
@@ -67,7 +72,7 @@ export default class Slider extends Component {
       </React.Fragment>
     ) : (
       <React.Fragment>
-        <AutoPlaySwipeableView interval={5000}>
+        <AutoPlaySwipeableView interval={7000}>
           {this.state.defaultSlides.map(slide => {
             return (
               <section

@@ -44,7 +44,7 @@ export default class Hero extends Component {
         <div className="hero-ctr-ctr">
           <div className="hero-container">
             A premium honey, delivered to your door!<br />
-            <a href="/store">
+            <a href="/Store">
               <button>Buy Now</button>
             </a>
           </div>

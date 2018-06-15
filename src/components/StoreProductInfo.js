@@ -28,7 +28,6 @@ export default class StoreProductInfo extends Component {
   }
 
   render() {
-
     return this.state.products.length > 0 ? (
       <React.Fragment>
         {this.state.products.map((product, index) => {

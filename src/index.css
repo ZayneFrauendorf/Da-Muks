@@ -13,20 +13,21 @@ body {
 #root {
   background: #fffcf5; }
 
-.notification-error {
-  background-color: red;
-  color: white; }
-
-.notification-success {
-  background-color: green;
-  color: white;
-  padding: 6px;
-  text-align: center;
-  font-weight: 500;
-  border-radius: 4px;
-  opacity: 0;
-  animation-duration: 2000ms;
-  animation-name: opacityOnAndOff; }
+.notification {
+  background-color: green; }
+  .notification-error {
+    background-color: red;
+    color: white; }
+  .notification-success {
+    background-color: green;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 4px;
+    opacity: 0;
+    animation-duration: 2000ms;
+    animation-name: opacityOnAndOff; }
 
 @keyframes opacityOnAndOff {
   0% {
@@ -35,9 +36,8 @@ body {
     opacity: 1; }
   100% {
     opacity: 0; } }
-
-.notification-none {
-  display: none; }
+  .notification-none {
+    display: none; }
 
 .header {
   position: relative;
@@ -47,9 +47,15 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   background-color: #fffcf5; }
+  @media (max-width: 900px) {
+    .header {
+      top: 0px;
+      position: fixed;
+      z-index: 1; } }
   .header .header-right {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    z-index: 2; }
     .header .header-right .mob-profile {
       display: flex;
       justify-content: center; }
@@ -115,10 +121,16 @@ body {
 
 .landing-page {
   position: relative; }
+  @media (max-width: 900px) {
+    .landing-page {
+      margin-top: 100px; } }
 
 .store {
   background: #3e3e3c;
   min-height: 100vh; }
+  @media (max-width: 900px) {
+    .store {
+      margin-top: 100px; } }
   .store .product-container {
     margin: auto;
     max-width: 1200px;
@@ -156,7 +168,7 @@ body {
     .store .product .price {
       position: absolute;
       bottom: -10px;
-      right: -30px;
+      right: -20px;
       background: #eb5e28;
       color: white;
       border-radius: 100%;
@@ -703,6 +715,9 @@ table {
 .about {
   position: relative;
   min-height: 100vh; }
+  @media (max-width: 900px) {
+    .about {
+      margin-top: 100px; } }
   .about .flex-container {
     display: flex;
     flex-wrap: wrap;

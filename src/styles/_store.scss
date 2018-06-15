@@ -1,9 +1,12 @@
-
 .store {
   background: #3e3e3c;
   min-height: 100vh;
+
+  @media (max-width: 900px) {
+    margin-top: 100px;
+  }
   // height: calc(100vh - 100px);
-  
+
   // display: flex;
 
   .product-container {
@@ -49,7 +52,7 @@
     .price {
       position: absolute;
       bottom: -10px;
-      right: -30px;
+      right: -20px;
       background: $orange;
       color: white;
       border-radius: 100%;

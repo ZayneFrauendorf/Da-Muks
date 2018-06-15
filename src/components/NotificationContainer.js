@@ -6,7 +6,17 @@ class NotificationContainer extends Component {
     const { message, type } = this.props;
 
     return (
-      <div>
+      <div
+        style={{
+          position: "absolute",
+          top: "100px",
+          margin: "0 auto",
+          zIndex: "1",
+          display: "block",
+          bottom: "-35px",
+          width: "100%"
+        }}
+      >
         {type && (
           <div className={`notification-${type}`}>
             <h3>{message}</h3>

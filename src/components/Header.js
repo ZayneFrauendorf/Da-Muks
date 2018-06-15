@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./Navigation";
 import logo from "../images/DaMuksLogo.png";
 import Image from "./Image";
+import NotificationContainer from "./NotificationContainer";
 
 class Header extends Component {
   render() {
@@ -33,6 +34,7 @@ class Header extends Component {
 
           <Navigation path={this.props.path} />
         </div>
+        <NotificationContainer />
       </div>
     );
   }

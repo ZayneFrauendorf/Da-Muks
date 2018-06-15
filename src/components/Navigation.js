@@ -84,7 +84,6 @@ class Navigation extends Component {
                   })}
 
                   <a href="#" className="snipcart-user-profile nav-item">
-                    {/* <i className="fas fa-user"></i> */}
                     <span className="">
                       <i className="fas fa-user" />
                     </span>

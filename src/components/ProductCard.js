@@ -14,15 +14,13 @@ class ProductCard extends Component {
 
   changeStateAppropriately = () => {
     if (this.props.message === "" && this.state.added !== true) {
-      this.props.dispatch(
-        addNotification("Success, purchase added to your cart", "success")
-      );
+      this.props.dispatch(addNotification("Purchase added to Cart", "success"));
 
       setTimeout(
         function() {
           this.props.dispatch(addNotification("", "none"));
         }.bind(this),
-        1000
+        1700
       );
     } else {
       this.props.dispatch(addNotification("", "none"));
