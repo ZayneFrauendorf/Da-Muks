@@ -20,19 +20,19 @@ export default class Slider extends Component {
     };
   }
 
-  componentDidMount() {
-    let dataURL = "http://localhost:8080/wp-json/wp/v2/slides?_embed";
-    this.setState({ loading: true }, () => {
-      fetch(dataURL)
-        .then(res => res.json())
-        .then(res => {
-          this.setState({
-            slides: res,
-            loading: false
-          });
-        });
-    });
-  }
+  // componentDidMount() {
+  //   let dataURL = "http://localhost:8080/wp-json/wp/v2/slides?_embed";
+  //   this.setState({ loading: true }, () => {
+  //     fetch(dataURL)
+  //       .then(res => res.json())
+  //       .then(res => {
+  //         this.setState({
+  //           slides: res,
+  //           loading: false
+  //         });
+  //       });
+  //   });
+  // }
 
   render() {
     let slides = this.state.slides.map(slide => {

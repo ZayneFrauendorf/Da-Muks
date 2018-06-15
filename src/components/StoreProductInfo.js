@@ -10,16 +10,16 @@ export default class StoreProductInfo extends Component {
     };
   }
 
-  componentDidMount() {
-    let dataURL = "http://localhost:8080/wp-json/wp/v2/products?_embed";
-    fetch(dataURL)
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          products: res.sort((a, b) => a.acf.price - b.acf.price)
-        });
-      });
-  }
+  // componentDidMount() {
+  //   let dataURL = "http://localhost:8080/wp-json/wp/v2/products?_embed";
+  //   fetch(dataURL)
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       this.setState({
+  //         products: res.sort((a, b) => a.acf.price - b.acf.price)
+  //       });
+  //     });
+  // }
 
   onChangeHandler(value) {
     this.setState({

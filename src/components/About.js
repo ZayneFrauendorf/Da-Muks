@@ -22,16 +22,16 @@ export default class About extends Component {
     }
   }
 
-  componentDidMount() {
-    let dataURL = "http://localhost:8080/wp-json/wp/v2/aboutsection?_embed";
-    fetch(dataURL)
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          aboutSections: res
-        });
-      });
-  }
+  // componentDidMount() {
+  //   let dataURL = "http://localhost:8080/wp-json/wp/v2/aboutsection?_embed";
+  //   fetch(dataURL)
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       this.setState({
+  //         aboutSections: res
+  //       });
+  //     });
+  // }
 
   render() {
     let aboutSections = this.state.aboutSections.map(section => {
