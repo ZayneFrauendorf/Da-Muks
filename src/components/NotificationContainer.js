@@ -9,7 +9,6 @@ class NotificationContainer extends Component {
       <div
         style={{
           position: "absolute",
-          top: "100px",
           margin: "0 auto",
           zIndex: "1",
           display: "block",

@@ -4,6 +4,9 @@ import jarHoney from "../images/HONEY.jpg";
 import niceBees from "../images/niceBees.jpg";
 import beeKeeperHolding from "../images/holdingBeesGrass.jpg";
 import holdingBeesFrontEyeLine from "../images/holdingBeesFrontEyeLine.jpg";
+import beesBoxCloseUp from "../images/beesBoxCloseUp.jpg";
+import beesHalfScreen from "../images/beesHalfScreen.jpg";
+import beesBox from "../images/beesBox.jpg";
 
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
@@ -19,8 +22,9 @@ export default class Slider extends Component {
       defaultSlides: [
         jarHoney,
         niceBees,
-        holdingBeesFrontEyeLine,
-        beeKeeperHolding
+        beesBoxCloseUp,
+        beesHalfScreen,
+        beesBox
       ]
     };
   }
@@ -46,7 +50,7 @@ export default class Slider extends Component {
 
     return slides.length > 0 ? (
       <React.Fragment>
-        <AutoPlaySwipeableView interval={7000}>
+        <AutoPlaySwipeableView interval={5000}>
           {slides.map(slide => {
             return (
               <section
@@ -58,7 +62,7 @@ export default class Slider extends Component {
                   textAlign: "center",
                   fontWeight: "bold",
                   height: "100vh",
-                  background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                  background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                    url(${slide})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center"
@@ -72,7 +76,7 @@ export default class Slider extends Component {
       </React.Fragment>
     ) : (
       <React.Fragment>
-        <AutoPlaySwipeableView interval={7000}>
+        <AutoPlaySwipeableView interval={5000}>
           {this.state.defaultSlides.map(slide => {
             return (
               <section
@@ -84,7 +88,7 @@ export default class Slider extends Component {
                   textAlign: "center",
                   fontWeight: "bold",
                   height: "100vh",
-                  background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                  background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                    url(${slide})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center"
