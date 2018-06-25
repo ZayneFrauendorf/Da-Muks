@@ -60,7 +60,7 @@ class ProductCard extends Component {
                   data-item-weight={weight}
                   data-item-description={description}
                   data-item-id={id}
-                  data-item-url="http://myapp.com/products/bacon"
+                  data-item-url="http://myapp.com/products/honey"
                   onClick={() => this.toggleAdded()}
                 >
                   Add to Cart

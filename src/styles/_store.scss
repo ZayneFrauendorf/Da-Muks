@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: row;
     background: white;
-    max-height: 300px;
+    max-height: 350px;
     max-width: 600px;
     padding: 20px;
     border-radius: 2px;
@@ -70,8 +70,9 @@
       display: flex;
       flex-direction: column;
       margin: 10px;
-      max-width: 200px;
-      max-height: 250px;
+      max-width: 210px;
+      max-height: 300px;
+      border: 8px black solid;
       img {
         max-width: 200px;
         max-height: 250px;
@@ -116,11 +117,14 @@
         background: white;
       }
       button {
-        background: none;
+        color: white;
+        background: black;
         border: 1px #5e5e5e solid;
         padding: 6px;
         cursor: pointer;
         margin: 2px;
+        height: 40px;
+        font-weight: bold;
       }
 
       select {
