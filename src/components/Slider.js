@@ -87,7 +87,6 @@ export default class Slider extends Component {
                   fontSize: "2rem",
                   textAlign: "center",
                   fontWeight: "bold",
-                  height: "100vh",
                   background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                    url(${slide})`,
                   backgroundSize: "cover",

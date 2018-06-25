@@ -491,7 +491,8 @@ table {
 .hero {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: calc(100vh - 101.75px - 60px); }
   .hero .hero-ctr-ctr {
     width: 100%;
     max-width: 800px; }

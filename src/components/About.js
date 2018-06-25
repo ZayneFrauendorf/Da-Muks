@@ -43,10 +43,10 @@ export default class About extends Component {
         <Header path={this.props.location.pathname} />
         <div className="about">
           <div className="flex-container">
-            {aboutSections.map(section => {
+            {aboutSections.map((section, index) => {
               return (
                 <div className="column">
-                  <img src={section.acf.image} alt="" className="fr" />
+                  <img src={section.acf.image} alt="" className={index % 2 === 0 ? "fl" : "fr"} />
                   <p>{section.acf.text}</p>
                 </div>
               );
