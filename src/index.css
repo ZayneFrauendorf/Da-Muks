@@ -496,7 +496,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100.75px - 60px); }
+  height: calc(100vh - 99.75px - 60px); }
   .hero .hero-ctr-ctr {
     width: 100%;
     max-width: 800px; }
